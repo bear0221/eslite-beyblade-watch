@@ -1,6 +1,6 @@
 # 誠品線上「戰鬥陀螺」上架監控
 
-定時呼叫誠品線上的搜尋 API,偵測**新上架**的戰鬥陀螺玩具。一發現新品就:
+定時呼叫誠品線上的搜尋 API,偵測戰鬥陀螺玩具的 **(1) 新上架** 和 **(2) 舊品補貨(從不可買變成可加購物車)**。一有動靜就:
 - 📱 推 **LINE**(或 Telegram)通知到你手機
 - 🔔 電腦跳桌面通知 + 響鈴
 - 📝 寫進 `watch.log`
@@ -10,9 +10,9 @@
 ## 目前狀態:☁️ 已部署到雲端(GitHub Actions)
 - Repo:https://github.com/bear0221/eslite-beyblade-watch(公開,Actions 免費不限時數)
 - **每 5 分鐘**由 GitHub 雲端自動檢查,**電腦關機也會跑**。
-- 只看**玩具/周邊**;有新上架就推 **LINE** 到手機。
+- 只看**玩具/周邊**;**新上架**或**舊品補貨可購買**都會推 **LINE** 到手機。
 - LINE 金鑰存在 repo 的 **Secrets**(`ESLITE_LINE_TOKEN`,加密),不在程式碼裡。
-- 已看過的商品記在 repo 的 `state.json`,雲端每次自己讀寫(只有出現新品才 commit)。
+- 已看過的商品記在 repo 的 `state.json`,雲端每次自己讀寫(只有新品或庫存狀態變化才 commit)。
 - 本機的 Windows 排程已移除,避免和雲端重複通知(本機指令仍可手動用)。
 
 ### 雲端管理(用 GitHub CLI;gh 已安裝)
@@ -28,9 +28,13 @@ $repo = "bear0221/eslite-beyblade-watch"
 - ⚠️ GitHub 排程實際可能略有延遲;且若 repo 連續 60 天沒有任何 commit,排程會被自動停用(到 Actions 頁面按 Enable 即可恢復)。
 
 ## 運作方式
-- 資料來源:誠品官方搜尋 API `https://athena.eslite.com/api/v2/search`(誠品網站自己也是打這支)。
+- 資料來源:誠品官方搜尋 API `https://holmes.eslite.com/v1/search`(誠品網站搜尋頁用的就是這支;支援 `page_no`/`page_size` 正常翻頁,並附帶 `availability`、`button_status` 等真實庫存狀態)。
+- **會自動翻頁抓「全部」結果**(目前約 78 項戰鬥陀螺玩具),不是只看前幾筆。
 - 第一次執行把目前所有結果存成「基準」(`state.json`),**不通知**。
-- 之後每次只要出現基準裡沒有的商品 ID,就判定「新上架」並通知。
+- 之後每次比對:
+  - 出現基準裡沒有的商品 ID → 判定 **新上架**。
+  - 既有商品從「不可購買」變成「可加購物車」(`button_status == add_to_shopping_cart`)→ 判定 **補貨可購買**。
+- 為降低雲端 commit 噪音,只有真的有變化(新品 / 庫存狀態改變)時才會寫回 `state.json`。
 
 ## 設定手機 LINE 通知(一次性)
 > LINE 舊的「LINE Notify」已於 2025/3/31 停止服務,所以改用官方 **Messaging API**(免費)。
@@ -86,5 +90,7 @@ python eslite_watch.py --uninstall-task     # 不想用了就移除
 - `watch.log` — 每次檢查紀錄
 
 ## 備註
-- 該 API 單次最多回 40 筆,程式監控搜尋結果前 40 名(依相關度排序,新品通常排前面;目前約 39 項玩具)。
-- 「上架」= 商品出現在誠品搜尋結果。庫存(`stock`)欄位誠品給的值不可靠,故以「是否被列出」為準。
+- 早期版本用的 `athena.eslite.com/api/v2/search` 單次最多只回 40 筆、且翻頁失效,會漏掉排在後面的商品;現已改用 `holmes` endpoint,**自動翻頁抓全部**。
+- 「新上架」= 出現在搜尋結果、且基準裡沒看過的商品 ID。
+- 「補貨可購買」= 既有商品的 `button_status` 變成 `add_to_shopping_cart`(能加購物車)。注意有些商品雖 `IN_STOCK` 但不能直接買(例如門市限定),所以以「能不能加購物車」為準,而不是只看有沒有庫存。
+- 只通知「變成可買」的方向;商品賣完(可買→不可買)只會默默更新狀態、不打擾你。

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-誠品線上「戰鬥陀螺」上架監控
+誠品線上「戰鬥陀螺」上架/補貨監控
 ================================
-定時呼叫誠品線上的搜尋 API,偵測「新上架」的商品。第一次執行會把目前
-所有結果記錄成基準(不通知);之後每次執行,只要出現新的商品 ID,就會
-跳 Windows 桌面通知 + 響鈴,並寫進 log。
+定時呼叫誠品線上的 holmes 搜尋 API(會自動翻頁抓全部結果),偵測:
+  (1) 新上架:出現基準裡沒看過的商品。
+  (2) 補貨可購買:既有商品從不可買變成可加購物車。
+第一次執行會把目前所有結果記錄成基準(不通知);之後有上述狀況就跳
+Windows 桌面通知 + 響鈴 + 推 LINE/Telegram 到手機,並寫進 log。
 
 用法:
     python eslite_watch.py                 # 跑一次(適合給 Windows 工作排程器定時呼叫)
@@ -50,12 +52,18 @@ ENABLE_SOUND = True   # 響鈴
 # LINE / Telegram 的金鑰放在同資料夾的 config.json(見 README)。
 # 有填 token 才會推播到手機,沒填就自動略過。
 
-API = "https://athena.eslite.com/api/v2/search"
-SIZE = 40             # 該 API 單次最多回 40 筆
+# 用誠品的 holmes 搜尋 endpoint:支援正常翻頁(page_no/page_size,一次最多 100),
+# 而且回傳 availability / button_status 等真實庫存狀態(athena 那支沒有、且只給前 40 筆)。
+HOLMES_API = "https://holmes.eslite.com/v1/search"
+PAGE_SIZE = 100       # holmes 單頁上限,通常一兩頁就抓完
+MAX_PAGES = 20        # 安全上限,避免極端情況無限翻頁
 TIMEOUT = 30
 RETRIES = 3
 USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+# 狀態結構版本。改變資料來源/欄位時 +1,程式偵測到版本不符會自動重建基準(不誤報)。
+SCHEMA = 2
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(HERE, "state.json")
@@ -172,43 +180,68 @@ def push_phone(text):
 
 
 # ── 抓資料 ─────────────────────────────────────────────────────────
-def fetch(keyword):
-    """呼叫誠品搜尋 API,回傳 (found 總數, 已正規化的商品 list)。"""
-    url = f"{API}?q={urllib.parse.quote(keyword)}&size={SIZE}&start=0"
-    req = urllib.request.Request(url, headers={
+def _holmes_page(keyword, page_no):
+    """抓 holmes 的某一頁,回傳 JSON dict(失敗回 None)。"""
+    qs = urllib.parse.urlencode({"q": keyword, "page_size": PAGE_SIZE, "page_no": page_no})
+    req = urllib.request.Request(f"{HOLMES_API}?{qs}", headers={
         "User-Agent": USER_AGENT,
         "Accept": "application/json",
+        # holmes 是 v3 endpoint,少了這個 header 會回 400
+        "content-type": "application/x-www-form-urlencoded",
     })
     last_err = None
     for attempt in range(1, RETRIES + 1):
         try:
             with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-                data = json.load(r)
-            hits = data.get("hits", {})
-            items = [normalize(h) for h in hits.get("hit", [])]
-            return hits.get("found", len(items)), items
+                return json.load(r)
         except Exception as e:
             last_err = e
             if attempt < RETRIES:
                 time.sleep(3 * attempt)
-    log(f"(查詢「{keyword}」失敗,已重試 {RETRIES} 次:{last_err})")
-    return None, []
+    log(f"(查詢「{keyword}」第 {page_no} 頁失敗,已重試 {RETRIES} 次:{last_err})")
+    return None
 
 
-def normalize(hit):
-    f = hit.get("fields", {}) or {}
-    mfr = f.get("manufacturer") or []
+def fetch(keyword):
+    """抓某關鍵字的『全部』結果(自動翻頁),回傳 (總數, 已正規化的商品 list)。"""
+    items = {}
+    total = None
+    for page_no in range(1, MAX_PAGES + 1):
+        data = _holmes_page(keyword, page_no)
+        if data is None:
+            # 第一頁就失敗 → 視為查詢失敗;後續頁失敗 → 用已抓到的部分
+            return (None, []) if page_no == 1 else (total, list(items.values()))
+        results = data.get("results") or []
+        if total is None:
+            try:
+                total = int(data.get("total_size", 0) or 0)
+            except (TypeError, ValueError):
+                total = 0
+        for r in results:
+            if r.get("id"):
+                items[r["id"]] = normalize(r)
+        if not results or len(items) >= (total or 0):
+            break
+    return (total if total is not None else len(items)), list(items.values())
+
+
+def normalize(r):
+    """把 holmes 的一筆 result 轉成本程式用的格式。
+    buyable = 能不能直接加購物車買(button_status == add_to_shopping_cart)。"""
+    mfr = r.get("manufacturers") or r.get("brands") or []
     if isinstance(mfr, list):
         mfr = "/".join(x for x in mfr if x)
+    pid = r.get("id", "")
+    btn = r.get("button_status", "")
     return {
-        "id": hit.get("id", ""),
-        "name": f.get("name", ""),
-        "price": str(f.get("final_price", "")),
-        "list_price": str(f.get("mprice", "")),
-        "url": f.get("url", ""),
-        "stock": str(f.get("stock", "")),
-        "create_date": f.get("create_date", ""),
-        "is_book": f.get("is_book", ""),
+        "id": pid,
+        "name": r.get("name", ""),
+        "price": str(r.get("final_price", "")),
+        "url": f"https://www.eslite.com/product/{pid}",
+        "availability": r.get("availability", ""),      # IN_STOCK / OUT_OF_STOCK
+        "button_status": btn,                            # add_to_shopping_cart 等
+        "buyable": btn == "add_to_shopping_cart",        # 真的可以買
+        "is_book": r.get("is_book", ""),
         "manufacturer": mfr,
     }
 
@@ -273,52 +306,85 @@ def check():
 
     state = load_state()
 
-    # 第一次執行:建立基準,不通知
-    if state is None or not state.get("items"):
+    # 第一次執行,或狀態結構版本不符(例如換了資料來源)→ 重建基準,不通知
+    if state is None or not state.get("items") or state.get("schema") != SCHEMA:
         items = {}
         for cid, it in current.items():
-            it = dict(it)
-            it["first_seen"] = now_str()
-            it["last_seen"] = now_str()
-            items[cid] = it
-        save_state({"created": now_str(), "last_check": now_str(), "items": items})
-        log(f"✅ 已建立基準:目前共 {len(items)} 項商品(誠品回報關鍵字總數約 {found} 筆)。")
-        log("   之後再執行,只要有『新上架』就會通知你。")
+            rec = dict(it)
+            rec["first_seen"] = now_str()
+            rec["last_seen"] = now_str()
+            items[cid] = rec
+        save_state({"schema": SCHEMA, "created": now_str(),
+                    "last_check": now_str(), "items": items})
+        buyable_n = sum(1 for it in current.values() if it.get("buyable"))
+        log(f"✅ 已建立基準:共 {len(items)} 項(其中可購買 {buyable_n} 項,總數約 {found} 筆)。")
+        log("   之後若有『新上架』或『舊品補貨可購買』都會通知你。")
         return
 
     known = state["items"]
-    new_ids = [cid for cid in current if cid not in known]
+    new_items, restock_items = [], []
+    buyable_flips = 0
 
-    # 沒有新品就不重寫 state(雲端時可避免每 5 分鐘都產生一筆 commit)
-    if not new_ids:
-        log(f"沒有新上架(目前監控 {len(known)} 項,本次查到 {len(current)} 項)。")
+    for cid, it in current.items():
+        if cid not in known:
+            new_items.append(it)
+            continue
+        prev_buyable = bool(known[cid].get("buyable"))
+        now_buyable = bool(it.get("buyable"))
+        if prev_buyable != now_buyable:
+            buyable_flips += 1
+            if now_buyable and not prev_buyable:
+                restock_items.append(it)        # 不可買 → 可買 = 補貨
+        # 更新既有商品的即時狀態(供下次比對)
+        known[cid].update(
+            buyable=now_buyable,
+            availability=it.get("availability", ""),
+            button_status=it.get("button_status", ""),
+            price=it.get("price", ""),
+            last_seen=now_str(),
+        )
+
+    # 把新商品記進基準
+    for it in new_items:
+        rec = dict(it)
+        rec["first_seen"] = now_str()
+        rec["last_seen"] = now_str()
+        known[rec["id"]] = rec
+
+    changed = bool(new_items) or buyable_flips > 0
+    notify = bool(new_items) or bool(restock_items)
+
+    if not changed:
+        buyable_n = sum(1 for v in known.values() if v.get("buyable"))
+        log(f"沒有變化(監控 {len(known)} 項,可購買 {buyable_n} 項)。")
         return
 
-    log(f"🎉 發現 {len(new_ids)} 項新上架商品!")
-    names = []
-    push_lines = [f"🎉 誠品新上架戰鬥陀螺 {len(new_ids)} 項!", ""]
-    for cid in new_ids:
-        it = current[cid]
-        names.append(it["name"])
-        log(f"   ★ {label(it)} NT${it['price']}  {it['name']}")
-        log(f"     {it['url']}")
-        push_lines.append(f"🧸 {it['name']}")
-        push_lines.append(f"NT${it['price']}  {it['url']}")
-        push_lines.append("")
-        # 記進基準
-        it = dict(it)
-        it["first_seen"] = now_str()
-        it["last_seen"] = now_str()
-        known[cid] = it
-
-    # 桌面通知(電腦端,雲端會自動略過)
-    head = names[0][:40]
-    if len(names) > 1:
-        head += f" 等 {len(names)} 項"
-    toast("誠品新上架戰鬥陀螺!", head)
-    beep()
-    # 手機通知(LINE / Telegram)
-    push_phone("\n".join(push_lines).strip())
+    if notify:
+        push_lines, head_parts = [], []
+        if new_items:
+            log(f"🎉 發現 {len(new_items)} 項新上架!")
+            head_parts.append(f"新上架 {len(new_items)} 項")
+            push_lines.append(f"🎉 新上架 {len(new_items)} 項")
+            for it in new_items:
+                tag = "✅可購買" if it.get("buyable") else "⏳尚未開賣"
+                log(f"   ★ NT${it['price']} {tag}  {it['name']}")
+                log(f"     {it['url']}")
+                push_lines += [f"🧸 {it['name']}", f"NT${it['price']} {tag}", it["url"], ""]
+        if restock_items:
+            log(f"♻️ {len(restock_items)} 項舊品補貨、現在可購買!")
+            head_parts.append(f"補貨 {len(restock_items)} 項")
+            push_lines.append(f"♻️ 補貨可購買 {len(restock_items)} 項")
+            for it in restock_items:
+                log(f"   ★ NT${it['price']} ✅可購買  {it['name']}")
+                log(f"     {it['url']}")
+                push_lines += [f"🧸 {it['name']}", f"NT${it['price']} ✅可購買", it["url"], ""]
+        first = (new_items + restock_items)[0]
+        toast("誠品戰鬥陀螺:" + "、".join(head_parts), first["name"][:40])
+        beep()
+        push_phone("\n".join(push_lines).strip())
+    else:
+        # 只有「可買→不可買(售出)」的變化:記錄狀態但不打擾你
+        log(f"狀態更新:{buyable_flips} 項庫存變動(無新上架/補貨,不通知)。")
 
     state["items"] = known
     state["last_check"] = now_str()
@@ -331,12 +397,15 @@ def cmd_list():
     if not state or not state.get("items"):
         print("目前沒有任何基準資料,請先執行一次 python eslite_watch.py")
         return
-    items = sorted(state["items"].values(), key=lambda x: x.get("first_seen", ""), reverse=True)
-    print(f"目前監控 {len(items)} 項(依首次發現時間排序):\n")
+    items = sorted(state["items"].values(),
+                   key=lambda x: (not x.get("buyable"), x.get("first_seen", "")))
+    buyable_n = sum(1 for it in items if it.get("buyable"))
+    print(f"目前監控 {len(items)} 項(可購買 {buyable_n} 項,可購買者排前面):\n")
     for it in items:
-        print(f"  {label(it)} NT${it['price']:>5}  {it['name']}")
-        print(f"     首次發現 {it.get('first_seen','?')} | {it['url']}")
-    print(f"\n上次檢查:{state.get('last_check','?')}")
+        tag = "✅可購買" if it.get("buyable") else "⏳缺貨/未開賣"
+        print(f"  {tag}  NT${it['price']:>5}  {it['name']}")
+        print(f"     {it['url']}")
+    print(f"\n上次更新:{state.get('last_check','?')}")
 
 
 def cmd_test():
