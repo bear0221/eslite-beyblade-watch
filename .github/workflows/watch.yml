@@ -1,0 +1,41 @@
+name: eslite-beyblade-watch
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'      # 每 5 分鐘(GitHub 排程實際可能略有延遲)
+  workflow_dispatch: {}         # 允許在 Actions 頁面手動按按鈕觸發
+
+permissions:
+  contents: write               # 讓流程能把 state.json 寫回 repo(記住已看過的商品)
+
+concurrency:
+  group: eslite-watch
+  cancel-in-progress: false     # 避免多次執行同時跑、互相打架
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 執行監控
+        env:
+          # LINE 金鑰放在 repo 的 Secrets(加密),不會出現在程式碼裡
+          ESLITE_LINE_TOKEN: ${{ secrets.ESLITE_LINE_TOKEN }}
+        run: python eslite_watch.py
+
+      - name: 保存狀態(只有出現新商品時才 commit)
+        run: |
+          if [ -n "$(git status --porcelain state.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add state.json
+            git commit -m "update state [skip ci]"
+            git push
+          else
+            echo "狀態未變動,本次不需 commit。"
+          fi

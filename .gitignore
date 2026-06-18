@@ -1,0 +1,9 @@
+# 機密:LINE / Telegram 金鑰絕對不要上傳(雲端改用 GitHub Secrets)
+config.json
+
+# 本機產生的檔案,不需版控
+watch.log
+*.tmp
+state.json.tmp
+__pycache__/
+*.pyc
