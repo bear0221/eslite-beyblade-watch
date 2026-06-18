@@ -7,10 +7,25 @@
 
 只用 Python 標準函式庫,**不需安裝任何套件**。
 
-## 目前狀態
-- 已設定:**每 5 分鐘**自動檢查、**只看玩具/周邊**(過濾書籍雜誌)。
-- 已註冊 Windows 工作排程 `EsliteBeybladeWatch`,登入後背景自動執行。
-- **還差一步**:把 LINE 金鑰填進 `config.json`,手機才收得到(見下方)。
+## 目前狀態:☁️ 已部署到雲端(GitHub Actions)
+- Repo:https://github.com/bear0221/eslite-beyblade-watch(公開,Actions 免費不限時數)
+- **每 5 分鐘**由 GitHub 雲端自動檢查,**電腦關機也會跑**。
+- 只看**玩具/周邊**;有新上架就推 **LINE** 到手機。
+- LINE 金鑰存在 repo 的 **Secrets**(`ESLITE_LINE_TOKEN`,加密),不在程式碼裡。
+- 已看過的商品記在 repo 的 `state.json`,雲端每次自己讀寫(只有出現新品才 commit)。
+- 本機的 Windows 排程已移除,避免和雲端重複通知(本機指令仍可手動用)。
+
+### 雲端管理(用 GitHub CLI;gh 已安裝)
+```powershell
+$gh = "C:\Program Files\GitHub CLI\gh.exe"
+$repo = "bear0221/eslite-beyblade-watch"
+& $gh run list  --repo $repo --limit 5          # 看最近幾次執行
+& $gh workflow run watch.yml --repo $repo        # 立刻手動跑一次
+& $gh secret set ESLITE_LINE_TOKEN --repo $repo  # 換 LINE 金鑰(會問你貼新值)
+```
+- **改頻率**:編輯 `.github/workflows/watch.yml` 裡的 `cron: '*/5 * * * *'`(例如 `*/15` 改成 15 分鐘),commit 後 `git push`。
+- **暫停**:到 repo 網頁 → Actions 分頁 → 左側選 workflow → 右上 `•••` → Disable workflow。
+- ⚠️ GitHub 排程實際可能略有延遲;且若 repo 連續 60 天沒有任何 commit,排程會被自動停用(到 Actions 頁面按 Enable 即可恢復)。
 
 ## 運作方式
 - 資料來源:誠品官方搜尋 API `https://athena.eslite.com/api/v2/search`(誠品網站自己也是打這支)。
