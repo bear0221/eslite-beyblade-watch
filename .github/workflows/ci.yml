@@ -1,0 +1,20 @@
+name: tests
+
+on:
+  push:
+    paths:                     # 只在程式/測試變動時跑(state.json 的自動 commit 不會觸發)
+      - '**.py'
+      - '.github/workflows/ci.yml'
+  pull_request:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: 跑單元測試
+        run: python -m unittest -v test_eslite_watch

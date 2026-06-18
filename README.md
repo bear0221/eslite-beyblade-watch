@@ -82,8 +82,16 @@ python eslite_watch.py --uninstall-task     # 不想用了就移除
 - `NAME_MUST_INCLUDE`:只盯名稱含特定字串(例如 `"CX-18"`)。
 - `ENABLE_TOAST` / `ENABLE_SOUND`:電腦端通知與響鈴開關。
 
+## 測試
+偵測邏輯(新上架 / 補貨 / 賣完後再補貨 / 同時新品+補貨 / 無變化 / schema 遷移 / 過濾)都有單元測試,不碰網路、不發通知:
+```powershell
+python -m unittest -v test_eslite_watch
+```
+每次推送程式碼,GitHub 也會自動跑這些測試(見 `.github/workflows/ci.yml`)。
+
 ## 檔案
 - `eslite_watch.py` — 主程式
+- `test_eslite_watch.py` — 單元測試
 - `config.json` — LINE / Telegram 金鑰
 - `toast.ps1` — 顯示 Windows 桌面通知
 - `state.json` — 已記錄商品基準(刪掉=重設)
