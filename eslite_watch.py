@@ -292,9 +292,15 @@ def save_state(state):
     os.replace(tmp, STATE_FILE)
 
 
-def label(item):
-    tag = "🧸玩具/周邊" if str(item.get("is_book")).lower() == "no" else "📖書籍"
-    return tag
+def item_lines(it):
+    """組一個商品在手機通知裡顯示的幾行。可購買 → 給明確的『立即購買』連結。"""
+    if it.get("buyable"):
+        return [f"🧸 {it['name']}",
+                f"NT${it['price']} ✅可購買",
+                f"👉 立即購買:{it['url']}", ""]
+    return [f"🧸 {it['name']}",
+            f"NT${it['price']} ⏳尚未開賣",
+            f"🔗 看商品:{it['url']}", ""]
 
 
 # ── 主要邏輯:檢查一次 ─────────────────────────────────────────────
@@ -369,7 +375,7 @@ def check():
                 tag = "✅可購買" if it.get("buyable") else "⏳尚未開賣"
                 log(f"   ★ NT${it['price']} {tag}  {it['name']}")
                 log(f"     {it['url']}")
-                push_lines += [f"🧸 {it['name']}", f"NT${it['price']} {tag}", it["url"], ""]
+                push_lines += item_lines(it)
         if restock_items:
             log(f"♻️ {len(restock_items)} 項舊品補貨、現在可購買!")
             head_parts.append(f"補貨 {len(restock_items)} 項")
@@ -377,7 +383,7 @@ def check():
             for it in restock_items:
                 log(f"   ★ NT${it['price']} ✅可購買  {it['name']}")
                 log(f"     {it['url']}")
-                push_lines += [f"🧸 {it['name']}", f"NT${it['price']} ✅可購買", it["url"], ""]
+                push_lines += item_lines(it)
         first = (new_items + restock_items)[0]
         toast("誠品戰鬥陀螺:" + "、".join(head_parts), first["name"][:40])
         beep()
