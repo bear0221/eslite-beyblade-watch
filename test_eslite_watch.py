@@ -171,10 +171,15 @@ class CheckLogicTest(unittest.TestCase):
 
 
 class FilterTest(unittest.TestCase):
-    """測試過濾條件 keep()(只看玩具 / 名稱包含)。"""
+    """測試過濾條件 keep()(只看玩具 / 名稱含關鍵字 / 名稱白名單)。"""
 
     def setUp(self):
-        self._saved = {n: getattr(ew, n) for n in ("ONLY_NON_BOOK", "NAME_MUST_INCLUDE")}
+        self._saved = {n: getattr(ew, n)
+                       for n in ("ONLY_NON_BOOK", "NAME_MUST_INCLUDE", "NAME_INCLUDE_ANY")}
+        # 預設關掉各過濾,讓每個測試只驗自己那一項
+        ew.ONLY_NON_BOOK = False
+        ew.NAME_MUST_INCLUDE = ""
+        ew.NAME_INCLUDE_ANY = []
 
     def tearDown(self):
         for n, v in self._saved.items():
@@ -182,15 +187,21 @@ class FilterTest(unittest.TestCase):
 
     def test_only_non_book_filters_out_books(self):
         ew.ONLY_NON_BOOK = True
-        ew.NAME_MUST_INCLUDE = ""
         self.assertTrue(ew.keep(make_item("A", is_book="no")))
         self.assertFalse(ew.keep(make_item("B", is_book="yes")))
 
     def test_name_must_include(self):
-        ew.ONLY_NON_BOOK = False
         ew.NAME_MUST_INCLUDE = "CX-18"
         self.assertTrue(ew.keep(make_item("A", name="BEYBLADE X CX-18 腕龍鞭打")))
         self.assertFalse(ew.keep(make_item("B", name="BEYBLADE X BX-49 蒼龍突擊")))
+
+    def test_name_include_any_filters_unrelated(self):
+        # 這就是「森林家族 / 假面」誤報的修正:名稱沒有 陀螺/BEYBLADE 就濾掉
+        ew.NAME_INCLUDE_ANY = ["陀螺", "BEYBLADE"]
+        self.assertTrue(ew.keep(make_item("A", name="BEYBLADE X戰鬥陀螺/ CX-18/ 腕龍鞭打")))
+        self.assertTrue(ew.keep(make_item("B", name="戰鬥紙陀螺 入門款")))
+        self.assertFalse(ew.keep(make_item("C", name="EPOCH森林家族嬰兒仙子變裝/ 抽抽包")))
+        self.assertFalse(ew.keep(make_item("D", name="假面: 人格面具")))
 
 
 if __name__ == "__main__":

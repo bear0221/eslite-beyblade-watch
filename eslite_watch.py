@@ -44,6 +44,11 @@ KEYWORDS = ["戰鬥陀螺"]
 # 只關心玩具/周邊、不想被「書籍/雜誌」洗版時,設成 True
 ONLY_NON_BOOK = True
 
+# 商品名稱必須「至少包含其中一個」關鍵字才算數(避免 holmes 模糊比對撈進不相關商品,
+# 例如森林家族、書籍)。大小寫不分。留空 list = 不過濾。
+# 想只盯 TOMY 正版那條線,可改成 ["BEYBLADE X"]。
+NAME_INCLUDE_ANY = ["陀螺", "BEYBLADE"]
+
 # 商品名稱必須包含這個字串才算數(留空 = 不過濾)。例如想盯特定型號可填 "CX-18"
 NAME_MUST_INCLUDE = ""
 
@@ -62,8 +67,8 @@ RETRIES = 3
 USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
-# 狀態結構版本。改變資料來源/欄位時 +1,程式偵測到版本不符會自動重建基準(不誤報)。
-SCHEMA = 2
+# 狀態結構版本。改變資料來源/欄位/過濾規則時 +1,程式偵測到版本不符會自動重建基準(不誤報)。
+SCHEMA = 3
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(HERE, "state.json")
@@ -248,9 +253,14 @@ def normalize(r):
 
 def keep(item):
     """套用使用者設定的過濾條件。"""
+    name = item.get("name", "")
     if ONLY_NON_BOOK and str(item.get("is_book")).lower() != "no":
         return False
-    if NAME_MUST_INCLUDE and NAME_MUST_INCLUDE not in item.get("name", ""):
+    if NAME_INCLUDE_ANY:
+        upper = name.upper()
+        if not any(kw.upper() in upper for kw in NAME_INCLUDE_ANY):
+            return False
+    if NAME_MUST_INCLUDE and NAME_MUST_INCLUDE not in name:
         return False
     return True
 

@@ -1,7 +1,7 @@
 {
-  "schema": 2,
-  "created": "2026-06-18 23:12:07",
-  "last_check": "2026-06-20 11:02:21",
+  "schema": 3,
+  "created": "2026-06-20 21:25:02",
+  "last_check": "2026-06-20 21:25:02",
   "items": {
     "10042014802683165873009": {
       "id": "10042014802683165873009",
@@ -13,8 +13,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683157348003": {
       "id": "10042014802683157348003",
@@ -26,112 +26,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683165874006": {
-      "id": "10042014802683165874006",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-51/ 蒼旋風發射器/ 黑綠",
-      "price": "250",
-      "url": "https://www.eslite.com/product/10042014802683165874006",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851922007": {
-      "id": "10042014802682851922007",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-03/ 魔導神杖",
-      "price": "265",
-      "url": "https://www.eslite.com/product/10042014802682851922007",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683135549002": {
-      "id": "10042014802683135549002",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-19/ 子彈獅鷲H",
-      "price": "550",
-      "url": "https://www.eslite.com/product/10042014802683135549002",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "can_not_buy",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-18 23:12:07"
-    },
-    "10042014802683166919003": {
-      "id": "10042014802683166919003",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-46/ 無限衝擊對戰組",
-      "price": "2500",
-      "url": "https://www.eslite.com/product/10042014802683166919003",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "can_not_buy",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-18 23:12:07"
-    },
-    "10042014802683066244007": {
-      "id": "10042014802683066244007",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-11/ 帝王威能",
-      "price": "875",
-      "url": "https://www.eslite.com/product/10042014802683066244007",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683154581007": {
-      "id": "10042014802683154581007",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-34/ 蒼穹龍騎士/ 豪華組",
-      "price": "420",
-      "url": "https://www.eslite.com/product/10042014802683154581007",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683109721007": {
-      "id": "10042014802683109721007",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-09/ 武士星劍/ 豪華組",
-      "price": "585",
-      "url": "https://www.eslite.com/product/10042014802683109721007",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683132897007": {
-      "id": "10042014802683132897007",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-17/ 隨機強化組 Vol. 10/ 隨機出貨",
-      "price": "350",
-      "url": "https://www.eslite.com/product/10042014802683132897007",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683109722004": {
       "id": "10042014802683109722004",
@@ -143,8 +39,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682961081007": {
       "id": "10042014802682961081007",
@@ -156,8 +52,60 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066244007": {
+      "id": "10042014802683066244007",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-11/ 帝王威能",
+      "price": "875",
+      "url": "https://www.eslite.com/product/10042014802683066244007",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683154581007": {
+      "id": "10042014802683154581007",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-34/ 蒼穹龍騎士/ 豪華組",
+      "price": "420",
+      "url": "https://www.eslite.com/product/10042014802683154581007",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851922007": {
+      "id": "10042014802682851922007",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-03/ 魔導神杖",
+      "price": "265",
+      "url": "https://www.eslite.com/product/10042014802682851922007",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683109721007": {
+      "id": "10042014802683109721007",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-09/ 武士星劍/ 豪華組",
+      "price": "585",
+      "url": "https://www.eslite.com/product/10042014802683109721007",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682961097008": {
       "id": "10042014802682961097008",
@@ -169,398 +117,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682961080000": {
-      "id": "10042014802682961080000",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-03/ 英仙幽冥",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802682961080000",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683066235005": {
-      "id": "10042014802683066235005",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-06/ 極狐九尾/ 隨機強化組/ 隨機出貨",
-      "price": "350",
-      "url": "https://www.eslite.com/product/10042014802683066235005",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851911001": {
-      "id": "10042014802682851911001",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-08/ 三合一對戰組",
-      "price": "675",
-      "url": "https://www.eslite.com/product/10042014802682851911001",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683105252000": {
-      "id": "10042014802683105252000",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-48/ Vol. 09/ 隨機強化組/ 隨機出貨",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683105252000",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683109724008": {
-      "id": "10042014802683109724008",
-      "name": "BEYBLADE X戰鬥陀螺/ BXG-13/ 神力聖劍",
-      "price": "535",
-      "url": "https://www.eslite.com/product/10042014802683109724008",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "coming_soon_not_book",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683118315006": {
-      "id": "10042014802683118315006",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-13/ 龍王閃擊",
-      "price": "445",
-      "url": "https://www.eslite.com/product/10042014802683118315006",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683157345002": {
-      "id": "10042014802683157345002",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-45/ 武士魂斬",
-      "price": "325",
-      "url": "https://www.eslite.com/product/10042014802683157345002",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851910004": {
-      "id": "10042014802682851910004",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-20/ 蒼龍利刃改造組",
-      "price": "675",
-      "url": "https://www.eslite.com/product/10042014802682851910004",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683004331004": {
-      "id": "10042014802683004331004",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-02/ 魔導至尊",
-      "price": "435",
-      "url": "https://www.eslite.com/product/10042014802683004331004",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683004332001": {
-      "id": "10042014802683004332001",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-05/ 隨機強化組 Vol. 6/ 隨機出貨",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683004332001",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683066233001": {
-      "id": "10042014802683066233001",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-09/ 通行證",
-      "price": "875",
-      "url": "https://www.eslite.com/product/10042014802683066233001",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10022136782683049883001": {
-      "id": "10022136782683049883001",
-      "name": "テレビマガジン (4月/2026/附對戰陀螺遊戲組)",
-      "price": "747",
-      "url": "https://www.eslite.com/product/10022136782683049883001",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "講談社",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683134637007": {
-      "id": "10042014802683134637007",
-      "name": "BEYBLADE X戰鬥陀螺/ BURST＃202/ 隨機強化組 Vol. 30/ 隨機出貨",
-      "price": "315",
-      "url": "https://www.eslite.com/product/10042014802683134637007",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "coming_soon_not_book",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10022136782683093780004": {
-      "id": "10022136782683093780004",
-      "name": "BEYBLADE X 必勝XTRAガイド (2026/附陀螺)",
-      "price": "799",
-      "url": "https://www.eslite.com/product/10022136782683093780004",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682961082004": {
-      "id": "10042014802682961082004",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-08/ 隨機強化組/ 隨機出貨",
-      "price": "350",
-      "url": "https://www.eslite.com/product/10042014802682961082004",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "can_not_buy",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-18 23:12:07"
-    },
-    "10042014802683066236002": {
-      "id": "10042014802683066236002",
-      "name": "BEYBLADE X戰鬥陀螺/ BXG-06/ 鮫鯊鋒鰭深海藍/ 限定版",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683066236002",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10022136782683125336001": {
-      "id": "10022136782683125336001",
-      "name": "コロコロイチバン! (6月/7月/合併号/2026/附名偵探柯南別冊&小報&戰鬥陀螺紙製收納盒&支援寶可夢劵)",
-      "price": "540",
-      "url": "https://www.eslite.com/product/10022136782683125336001",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683069573005": {
-      "id": "10042014802683069573005",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-18/ Vol.8/ 隨機強化組/ 隨機出貨",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683069573005",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851917003": {
-      "id": "10042014802682851917003",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-01/ 蒼龍爆刃",
-      "price": "355",
-      "url": "https://www.eslite.com/product/10042014802682851917003",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683109723001": {
-      "id": "10042014802683109723001",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-12/ 鳳凰閃焰",
-      "price": "315",
-      "url": "https://www.eslite.com/product/10042014802683109723001",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "coming_soon_not_book",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683066241006": {
-      "id": "10042014802683066241006",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-10/ 銀狼狩獵",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683066241006",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851914002": {
-      "id": "10042014802682851914002",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-21/ 惡魔鎖鏈改造組",
-      "price": "675",
-      "url": "https://www.eslite.com/product/10042014802682851914002",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851926005": {
-      "id": "10042014802682851926005",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-24/ 隨機強化組 Vol. 2/ 隨機出貨",
-      "price": "265",
-      "url": "https://www.eslite.com/product/10042014802682851926005",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683031789007": {
-      "id": "10042014802683031789007",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-16/ 時鐘幻象/ 隨機強化組/ 隨機出貨",
-      "price": "259",
-      "url": "https://www.eslite.com/product/10042014802683031789007",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683004336009": {
-      "id": "10042014802683004336009",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-23/ 鳳凰飛翼/ 豪華組",
-      "price": "435",
-      "url": "https://www.eslite.com/product/10042014802683004336009",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851907004": {
-      "id": "10042014802682851907004",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-06/ 騎士重盾/ 蒼藍",
-      "price": "315",
-      "url": "https://www.eslite.com/product/10042014802682851907004",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683118312005": {
-      "id": "10042014802683118312005",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-14/ 騎士堡壘",
-      "price": "445",
-      "url": "https://www.eslite.com/product/10042014802683118312005",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683066232004": {
-      "id": "10042014802683066232004",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-08/ 霜輝銀狼",
-      "price": "347",
-      "url": "https://www.eslite.com/product/10042014802683066232004",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683069571001": {
-      "id": "10042014802683069571001",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-17/ 隕星龍騎士",
-      "price": "484",
-      "url": "https://www.eslite.com/product/10042014802683069571001",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683069572008": {
-      "id": "10042014802683069572008",
-      "name": "BEYBLADE X戰鬥陀螺/ BXG-22/ 龍騎士S",
-      "price": "308",
-      "url": "https://www.eslite.com/product/10042014802683069572008",
-      "availability": "IN_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683132117006": {
       "id": "10042014802683132117006",
@@ -572,8 +130,411 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682961080000": {
+      "id": "10042014802682961080000",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-03/ 英仙幽冥",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802682961080000",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066235005": {
+      "id": "10042014802683066235005",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-06/ 極狐九尾/ 隨機強化組/ 隨機出貨",
+      "price": "350",
+      "url": "https://www.eslite.com/product/10042014802683066235005",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851911001": {
+      "id": "10042014802682851911001",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-08/ 三合一對戰組",
+      "price": "675",
+      "url": "https://www.eslite.com/product/10042014802682851911001",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683105252000": {
+      "id": "10042014802683105252000",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-48/ Vol. 09/ 隨機強化組/ 隨機出貨",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683105252000",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683109724008": {
+      "id": "10042014802683109724008",
+      "name": "BEYBLADE X戰鬥陀螺/ BXG-13/ 神力聖劍",
+      "price": "535",
+      "url": "https://www.eslite.com/product/10042014802683109724008",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "coming_soon_not_book",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683118315006": {
+      "id": "10042014802683118315006",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-13/ 龍王閃擊",
+      "price": "445",
+      "url": "https://www.eslite.com/product/10042014802683118315006",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683157345002": {
+      "id": "10042014802683157345002",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-45/ 武士魂斬",
+      "price": "325",
+      "url": "https://www.eslite.com/product/10042014802683157345002",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683132897007": {
+      "id": "10042014802683132897007",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-17/ 隨機強化組 Vol. 10/ 隨機出貨",
+      "price": "350",
+      "url": "https://www.eslite.com/product/10042014802683132897007",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851910004": {
+      "id": "10042014802682851910004",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-20/ 蒼龍利刃改造組",
+      "price": "675",
+      "url": "https://www.eslite.com/product/10042014802682851910004",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683004331004": {
+      "id": "10042014802683004331004",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-02/ 魔導至尊",
+      "price": "435",
+      "url": "https://www.eslite.com/product/10042014802683004331004",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683004332001": {
+      "id": "10042014802683004332001",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-05/ 隨機強化組 Vol. 6/ 隨機出貨",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683004332001",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066233001": {
+      "id": "10042014802683066233001",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-09/ 通行證",
+      "price": "875",
+      "url": "https://www.eslite.com/product/10042014802683066233001",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10022136782683049883001": {
+      "id": "10022136782683049883001",
+      "name": "テレビマガジン (4月/2026/附對戰陀螺遊戲組)",
+      "price": "747",
+      "url": "https://www.eslite.com/product/10022136782683049883001",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "講談社",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683134637007": {
+      "id": "10042014802683134637007",
+      "name": "BEYBLADE X戰鬥陀螺/ BURST＃202/ 隨機強化組 Vol. 30/ 隨機出貨",
+      "price": "315",
+      "url": "https://www.eslite.com/product/10042014802683134637007",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "coming_soon_not_book",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10022136782683093780004": {
+      "id": "10022136782683093780004",
+      "name": "BEYBLADE X 必勝XTRAガイド (2026/附陀螺)",
+      "price": "799",
+      "url": "https://www.eslite.com/product/10022136782683093780004",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "Shogakukan Inc.株式会社小学館",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066236002": {
+      "id": "10042014802683066236002",
+      "name": "BEYBLADE X戰鬥陀螺/ BXG-06/ 鮫鯊鋒鰭深海藍/ 限定版",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683066236002",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10022136782683125336001": {
+      "id": "10022136782683125336001",
+      "name": "コロコロイチバン! (6月/7月/合併号/2026/附名偵探柯南別冊&小報&戰鬥陀螺紙製收納盒&支援寶可夢劵)",
+      "price": "540",
+      "url": "https://www.eslite.com/product/10022136782683125336001",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "Shogakukan Inc.株式会社小学館",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683165874006": {
+      "id": "10042014802683165874006",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-51/ 蒼旋風發射器/ 黑綠",
+      "price": "250",
+      "url": "https://www.eslite.com/product/10042014802683165874006",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683069573005": {
+      "id": "10042014802683069573005",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-18/ Vol.8/ 隨機強化組/ 隨機出貨",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683069573005",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851917003": {
+      "id": "10042014802682851917003",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-01/ 蒼龍爆刃",
+      "price": "355",
+      "url": "https://www.eslite.com/product/10042014802682851917003",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683109723001": {
+      "id": "10042014802683109723001",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-12/ 鳳凰閃焰",
+      "price": "315",
+      "url": "https://www.eslite.com/product/10042014802683109723001",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "coming_soon_not_book",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066241006": {
+      "id": "10042014802683066241006",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-10/ 銀狼狩獵",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683066241006",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851914002": {
+      "id": "10042014802682851914002",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-21/ 惡魔鎖鏈改造組",
+      "price": "675",
+      "url": "https://www.eslite.com/product/10042014802682851914002",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851926005": {
+      "id": "10042014802682851926005",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-24/ 隨機強化組 Vol. 2/ 隨機出貨",
+      "price": "265",
+      "url": "https://www.eslite.com/product/10042014802682851926005",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683031789007": {
+      "id": "10042014802683031789007",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-16/ 時鐘幻象/ 隨機強化組/ 隨機出貨",
+      "price": "259",
+      "url": "https://www.eslite.com/product/10042014802683031789007",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683004336009": {
+      "id": "10042014802683004336009",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-23/ 鳳凰飛翼/ 豪華組",
+      "price": "435",
+      "url": "https://www.eslite.com/product/10042014802683004336009",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851907004": {
+      "id": "10042014802682851907004",
+      "name": "BEYBLADE X戰鬥陀螺/ BX-06/ 騎士重盾/ 蒼藍",
+      "price": "315",
+      "url": "https://www.eslite.com/product/10042014802682851907004",
+      "availability": "IN_STOCK",
+      "button_status": "add_to_shopping_cart",
+      "buyable": true,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683118312005": {
+      "id": "10042014802683118312005",
+      "name": "BEYBLADE X戰鬥陀螺/ CX-14/ 騎士堡壘",
+      "price": "445",
+      "url": "https://www.eslite.com/product/10042014802683118312005",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683066232004": {
+      "id": "10042014802683066232004",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-08/ 霜輝銀狼",
+      "price": "347",
+      "url": "https://www.eslite.com/product/10042014802683066232004",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683069571001": {
+      "id": "10042014802683069571001",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-17/ 隕星龍騎士",
+      "price": "484",
+      "url": "https://www.eslite.com/product/10042014802683069571001",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802683069572008": {
+      "id": "10042014802683069572008",
+      "name": "BEYBLADE X戰鬥陀螺/ BXG-22/ 龍騎士S",
+      "price": "308",
+      "url": "https://www.eslite.com/product/10042014802683069572008",
+      "availability": "IN_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10022136782682848095004": {
       "id": "10022136782682848095004",
@@ -585,8 +546,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851919007": {
       "id": "10042014802682851919007",
@@ -598,8 +559,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683118313002": {
       "id": "10042014802683118313002",
@@ -611,8 +572,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851915009": {
       "id": "10042014802682851915009",
@@ -624,21 +585,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802682851916006": {
-      "id": "10042014802682851916006",
-      "name": "BEYBLADE X戰鬥陀螺/ UX-05/ 忍者闇影/ 隨機強化組/ 隨機出貨",
-      "price": "265",
-      "url": "https://www.eslite.com/product/10042014802682851916006",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851918000": {
       "id": "10042014802682851918000",
@@ -650,8 +598,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683118314009": {
       "id": "10042014802683118314009",
@@ -663,8 +611,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683004337006": {
       "id": "10042014802683004337006",
@@ -676,8 +624,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683066234008": {
       "id": "10042014802683066234008",
@@ -689,21 +637,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683118311008": {
-      "id": "10042014802683118311008",
-      "name": "BEYBLADE X戰鬥陀螺/ CX-15/ 邪神狂怒",
-      "price": "350",
-      "url": "https://www.eslite.com/product/10042014802683118311008",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "can_not_buy",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-18 23:12:07"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851924001": {
       "id": "10042014802682851924001",
@@ -715,8 +650,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683154580000": {
       "id": "10042014802683154580000",
@@ -728,8 +663,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851925008": {
       "id": "10042014802682851925008",
@@ -741,8 +676,21 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
+    },
+    "10042014802682851916006": {
+      "id": "10042014802682851916006",
+      "name": "BEYBLADE X戰鬥陀螺/ UX-05/ 忍者闇影/ 隨機強化組/ 隨機出貨",
+      "price": "265",
+      "url": "https://www.eslite.com/product/10042014802682851916006",
+      "availability": "OUT_OF_STOCK",
+      "button_status": "not_add_to_notice",
+      "buyable": false,
+      "is_book": "no",
+      "manufacturer": "TOMY COMPANY,LTD.",
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851912008": {
       "id": "10042014802682851912008",
@@ -754,8 +702,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683132121003": {
       "id": "10042014802683132121003",
@@ -767,8 +715,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683132120006": {
       "id": "10042014802683132120006",
@@ -780,8 +728,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851923004": {
       "id": "10042014802682851923004",
@@ -793,8 +741,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851909008": {
       "id": "10042014802682851909008",
@@ -806,8 +754,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802682851921000": {
       "id": "10042014802682851921000",
@@ -819,8 +767,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683154579004": {
       "id": "10042014802683154579004",
@@ -832,8 +780,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10022136782682592487001": {
       "id": "10022136782682592487001",
@@ -845,8 +793,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683134638004": {
       "id": "10042014802683134638004",
@@ -858,21 +806,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683169929009": {
-      "id": "10042014802683169929009",
-      "name": "BEYBLADE X戰鬥陀螺/ BX-27/ 幻神護甲/ 隨機強化組/ 隨機出貨",
-      "price": "295",
-      "url": "https://www.eslite.com/product/10042014802683169929009",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "can_not_buy",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-18 23:12:07"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683132123007": {
       "id": "10042014802683132123007",
@@ -884,8 +819,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10022136782682848098005": {
       "id": "10022136782682848098005",
@@ -897,8 +832,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042014802683132122000": {
       "id": "10042014802683132122000",
@@ -910,8 +845,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "TOMY COMPANY,LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "1004502042682301099006": {
       "id": "1004502042682301099006",
@@ -923,8 +858,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "craze",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042241012682614235009": {
       "id": "10042241012682614235009",
@@ -936,8 +871,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "康軒文教事業股份有限公司",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "1007245832805349": {
       "id": "1007245832805349",
@@ -949,8 +884,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "PlanToys, Inc.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10052235482682826898009": {
       "id": "10052235482682826898009",
@@ -962,8 +897,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "優盛國際有限公司",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10022136782682635259008": {
       "id": "10022136782682635259008",
@@ -975,8 +910,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "Shogakukan Inc.株式会社小学館",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042241272682805719004": {
       "id": "10042241272682805719004",
@@ -988,8 +923,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "昊悅國際事業有限公司",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "10042201312683071559004": {
       "id": "10042201312683071559004",
@@ -1001,8 +936,8 @@
       "buyable": true,
       "is_book": "no",
       "manufacturer": "PlanToys, Inc.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     },
     "1006246392682091795003": {
       "id": "1006246392682091795003",
@@ -1014,34 +949,8 @@
       "buyable": false,
       "is_book": "no",
       "manufacturer": "Moulin Roty CO., LTD.",
-      "first_seen": "2026-06-18 23:12:07",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "10042014802683059475005": {
-      "id": "10042014802683059475005",
-      "name": "EPOCH森林家族嬰兒仙子變裝/ 抽抽包/ 隨機出貨",
-      "price": "157",
-      "url": "https://www.eslite.com/product/10042014802683059475005",
-      "availability": "OUT_OF_STOCK",
-      "button_status": "not_add_to_notice",
-      "buyable": false,
-      "is_book": "no",
-      "manufacturer": "EPOCH CO., LTD",
-      "first_seen": "2026-06-20 11:02:20",
-      "last_seen": "2026-06-20 11:02:20"
-    },
-    "1004282972559567": {
-      "id": "1004282972559567",
-      "name": "假面: 人格面具",
-      "price": "199",
-      "url": "https://www.eslite.com/product/1004282972559567",
-      "availability": "IN_STOCK",
-      "button_status": "add_to_shopping_cart",
-      "buyable": true,
-      "is_book": "no",
-      "manufacturer": "搖滾萬歲映畫社",
-      "first_seen": "2026-06-20 11:02:20",
-      "last_seen": "2026-06-20 11:02:20"
+      "first_seen": "2026-06-20 21:25:02",
+      "last_seen": "2026-06-20 21:25:02"
     }
   }
 }
